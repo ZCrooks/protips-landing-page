@@ -6,7 +6,16 @@ import testimonial from '../assets/testimonial.png';
 import beachView from '../assets/beachView.png';
 import coastalView from '../assets/coastalView.png';
 import townView from '../assets/townView.png';
+import bird from '../assets/bird.png';
+import biohazard from '../assets/biohazard.png';
+import handshake from '../assets/handshake.png';
+import hamsa from '../assets/hamsa.png';
+import atlas from '../assets/atlas.png';
+import astronaut from '../assets/user-astronaut.png';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
 const LandingPage = () => {
 
@@ -16,65 +25,78 @@ const LandingPage = () => {
             <header>
                 <img src={logo} alt="Protips Logo" />
                 <nav>
-                    <ul>
+                    <ul className='nav-bar'>
                         <li>Home</li>
                         <li>About</li>
                         <li>Pricing</li>
                         <li>Contact</li>
                     </ul>
-                    <button>Sign In</button>
-                    <button>Sign Up</button>
+                    <button className='sign-in'>Sign In</button>
+                    <button className='sign-up'>Sign Up</button>
                 </nav>
             </header>
             <main>
-                <section>
+                <section className='intro'>
                     <div>
-                        <h1>A Guide to <strong>Rocky</strong> Mountain Vacations</h1>
-                        <p>Maui helicopter tours are a great way to see the island from a different perspective and have a fun adventure. If you have never been on a helicopter before, this is a great place to do it. </p>
-                        <Link to ="#" className="get-started-btn">Get started</Link>
+                        <h1>A Guide To <strong>Rocky</strong> Mountain Vacations</h1>
+                        <p className='intro-p'>Maui helicopter tours are a great way to see the island from a different perspective and have a fun adventure. If you have never been on a helicopter before, this is a great place to do it. </p>
+                        <Link to ="#" className="btn">Get started</Link>
                     </div>
                     <img src={videoScreen} alt="Company's intro video screenshot" />
                 </section>
 
-                <section>
+                <section className='features'>
                     <ul>
                         <li>
+                            <div className='icon-box'>
+                                <img src={atlas} alt="globe icon" />
+                            </div>
                             <h4>First click tests</h4>
                             <p>While most people enjoy casino gambling.</p>
                         </li>
                         <li>
+                            <div className='icon-box' id="biohazard" >
+                                <img src={biohazard}alt="biohazard icon"/>
+                            </div>
                             <h4>Design surveys</h4>
                             <p>Sports betting, lottery and bingo playing for fun.</p>
                         </li>
                         <li>
+                            <div className='icon-box'>
+                                <img src={handshake} alt="handshake icon" />
+                            </div>
                             <h4>Preference tests</h4>
                             <p>The Myspace page defines the individual.</p>
                         </li>
                         <li>
+                            <div className='icon-box'>
+                                <img src={astronaut} alt="astronaut icon" />
+                            </div>
                             <h4>User astronaut</h4>
                             <p>Personal choices and the overall personality of the person.</p>
                         </li>
                     </ul>
                 </section>
 
-                <section>
+                <section className='learn'>
                     <img src={learnPhoto} alt="Company clipart" />
-                    <div>
-                        <div>
+                    <div className='protips'>
+                        <div className='sub-header'>
                             <p>About</p>
                             <img src={logo} alt="" />
                         </div>
                         <h2>Learn with Protips</h2>
-                        <ul>
-                            <li>Beyond the Naked Eye</li>
-                            <li>Make Grilling a Healthy Experience</li>
-                            <li>Make Sure Your Ice Is Safe And Clean</li>
-                            <li>Peace On Earth A Wonderful Wish But No Way</li>
-                            <li>Get Best Advertiser In Your Side Pocket</li>
-                            <li>What's Under Your Grill</li>
+                        <ul className='protips-list'>
+                            <li><FontAwesomeIcon icon={faCircleCheck} style={{color: "#ee5f5b",}} />  Beyond the Naked Eye</li>
+                            <li><FontAwesomeIcon icon={faCircleCheck} style={{color: "#ee5f5b",}} />  Make Grilling a Healthy Experience</li>
+                            <li><FontAwesomeIcon icon={faCircleCheck} style={{color: "#ee5f5b",}} />  Make Sure Your Ice Is Safe And Clean</li>
+                            <li><FontAwesomeIcon icon={faCircleCheck} style={{color: "#ee5f5b",}} />  Peace On Earth A Wonderful Wish But No Way</li>
+                            <li><FontAwesomeIcon icon={faCircleCheck} style={{color: "#ee5f5b",}} />  Get Best Advertiser In Your Side Pocket</li>
+                            <li><FontAwesomeIcon icon={faCircleCheck} style={{color: "#ee5f5b",}} />  What's Under Your Grill</li>
                         </ul>
-                        <Link to="#">Know More</Link>
-                        <Link to="#">Watch Video</Link>
+                        <Link to="#" className='btn'>Know More</Link>
+                        <Link className='video-play' to="#">Watch Video </Link> 
+                        <FontAwesomeIcon icon={faPlay} style={{color: "#ee5f5b",}} />
                     </div>
                 </section>
 
@@ -82,20 +104,22 @@ const LandingPage = () => {
                     <h3>Testimonial</h3>
                     <p>Vampies The Romantic Ideology Behind Them</p>
                     <img src={testimonial} alt="Man's professional headshot for testimonial section" />
-                    <p>John Doe</p>
-                    <p>CEO, PrettyDopeDesigns</p>
-                    <p>"When To Use High Heat On Your Barbeque, What's Under Your Grill"</p>
+                    <p className='ceo'>John Doe</p>
+                    <p className='title'>CEO, PrettyDopeDesigns</p>
+                    <p className='quote'>"When To Use High Heat On Your Barbeque, What's Under Your Grill"</p>
                 </section>
 
                 <section>
                     <h3>Our Story</h3>
                     <p>Vampies The romantic Ideology Behind them</p>
                     <div>
+                        <img src={bird} alt="bird icon" />
                         <h4>Who are we?</h4>
                         <p>There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life.</p>
                         <p><span>And part of that is the desire to instill</span> in our children the love of science, of learning and particularly the love of nature.</p>
                     </div>
                     <div>
+                        <img src={hamsa} alt="hamsa icon" />
                         <h4>What's up with the name?</h4>
                         <p>There are advances being made in science and technology everyday, and a good example of this is the LCD monitor. LCD monitors have several benefits over the old chunky <strong>computer</strong> monitors that most users are familiar with. Old computer monitors, take up quite a bit of desktop space, put out a ton of heat, drain a ton of energy, and most often have low picture quality and resolution.</p>
                     </div>
