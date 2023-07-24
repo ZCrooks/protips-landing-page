@@ -16,6 +16,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import Newsletter from '../components/Newsletter';
 
 const LandingPage = () => {
 
@@ -26,10 +27,10 @@ const LandingPage = () => {
                 <img src={logo} alt="Protips Logo" />
                 <nav>
                     <ul className='nav-bar'>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Pricing</li>
-                        <li>Contact</li>
+                        <Link to="#">Home</Link>
+                        <Link to="#">About</Link>
+                        <Link to="#">Pricing</Link>
+                        <Link to="#">Contact</Link>
                     </ul>
                     <button className='sign-in'>Sign In</button>
                     <button className='sign-up'>Sign Up</button>
@@ -169,6 +170,7 @@ const LandingPage = () => {
 
                 <section>
                     {/* Insert Subscription Component Here */}
+                    <Newsletter />
                 </section>
 
                 <section className='bottom-nav'>

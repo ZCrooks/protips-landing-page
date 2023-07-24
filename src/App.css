@@ -18,8 +18,7 @@ img {max-width: 100%; display: block;}
 }
 
 body {
-    background-image: radial-gradient(at top right, transparent 60%, #fff 50%),
-        linear-gradient(180deg, #FF4F4F 100%, #FF4F4F 100%);
+    background-image: radial-gradient(at top right, transparent 50%, #fff 50%), linear-gradient(#FF4F4F 100%, #FF4F4F 100%);
     background-size: 120% 100%, cover;
     background-repeat: no-repeat;
     margin: 0;
@@ -34,10 +33,13 @@ sans-serif;
 font-family: 'Poppins', sans-serif; */
 
 h1 { 
-    font-family: 'Gotham', sans-serif;
     font-size: 2.5rem;
     font-weight: normal;
     color: #262626;
+}
+
+h1, label {
+    font-family: 'Gotham', sans-serif;
 }
 
 .ceo {
@@ -46,7 +48,7 @@ h1 {
 }
 
 
-h2, h3, h4, h5, p, li, a, .btn, .bottom-nav, .sign-in, .sign-up, .video-play {
+h2, h3, h4, h5, p, li, a, input, .btn, .bottom-nav, .sign-in, .sign-up, .video-play {
     font-family: 'Poppins', sans-serif;
     color: #262626;
     line-height: 30px;
@@ -61,7 +63,7 @@ h4 {
     font-weight: 600;
 }
 
-.nav-bar li {
+.nav-bar a {
     font-size: 0.8rem;
     color: white;
 }
@@ -71,6 +73,9 @@ p {
 }
 
 /* Colors and Buttons*/
+label, input {
+    color: #FFFFFF;
+}
 
 .title {
     color: #FF4F4F;
@@ -111,7 +116,7 @@ nav button:not(:last-child) {
     padding: 15px;
     color: #FFFFFF;
     border-radius: 5px;
-    border: 1px solid #FFFFFF;
+    border: 2px solid #FFFFFF;
 }
 nav button:not(:last-child):hover,
 nav button:not(:first-of-type):hover {
@@ -128,7 +133,7 @@ nav button:not(:first-of-type) {
     padding: 15px;
     color: #FFFFFF;
     border-radius: 5px;
-    border: 1px solid #262626;
+    border: 2px solid #262626;
 }
 
 
@@ -140,9 +145,6 @@ header {
     align-items: center;
 }
 
-header li {
-    list-style: none;
-}
 
 nav {
     display: flex;
@@ -156,8 +158,9 @@ nav {
     margin: 30px;
 }
 
-.nav-bar li {
+.nav-bar a {
     margin-left: 20px;
+    text-decoration: none;
 }
 
 /* INTRO SECTION */
@@ -238,9 +241,8 @@ nav {
 /* TESTIMONIAL SECTION */
 .testimonial {
     text-align: center;
-    margin-top: 15%;
+    margin-top: 10%;
 }
-
 
 .testimonial p {
     margin-top: 0;
@@ -320,6 +322,44 @@ h3, .subheader {
     margin-top: 0;
 }
 
+/* NEWSLETTER SUBSCRIPTION */
+form, input {
+    background-color: #FF4F4F;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    height: 25vh;
+    width: 100%;
+    border-radius: 8px;
+    padding: 50px;
+    justify-content: space-evenly;
+    margin-bottom: 4%;
+}
+
+input {
+    border: 1px solid #FFFFFF;
+}
+
+.submit {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+}
+
+.submit:hover {
+    cursor: pointer;
+    background: #474BFF;
+}
+
+.submit:focus {
+    cursor: pointer;
+}
+
+.field {
+    display: flex;
+}
+
 /* BOTTOM NAV SECTION */
 
 .bottom-nav {
@@ -355,7 +395,7 @@ h3, .subheader {
 /* FOOTER */
 
 footer {
-    margin-top: 15%;
+    margin-top: 10%;
     text-align: center;
 }
 
