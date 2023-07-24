@@ -100,86 +100,111 @@ const LandingPage = () => {
                     </div>
                 </section>
 
-                <section>
+                <section className='testimonial'>
                     <h3>Testimonial</h3>
                     <p>Vampies The Romantic Ideology Behind Them</p>
-                    <img src={testimonial} alt="Man's professional headshot for testimonial section" />
-                    <p className='ceo'>John Doe</p>
-                    <p className='title'>CEO, PrettyDopeDesigns</p>
-                    <p className='quote'>"When To Use High Heat On Your Barbeque, What's Under Your Grill"</p>
+                    <div className='profile'>
+                        <img src={testimonial} alt="Man's professional headshot for testimonial section" />
+                        <p className='ceo'>John Doe</p>
+                        <p className='title'>CEO, PrettyDopeDesigns</p>
+                        <p className="quote">"When To Use High Heat On Your Barbeque, What's Under Your Grill"</p>
+                        <ul class="carousel-indicators">
+                            <li></li>
+                            <li className="active"></li>
+                            <li></li>
+                    </ul>
+                    </div>
+
                 </section>
 
-                <section>
+                <section className="story">
                     <h3>Our Story</h3>
-                    <p>Vampies The romantic Ideology Behind them</p>
-                    <div>
-                        <img src={bird} alt="bird icon" />
-                        <h4>Who are we?</h4>
-                        <p>There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life.</p>
-                        <p><span>And part of that is the desire to instill</span> in our children the love of science, of learning and particularly the love of nature.</p>
-                    </div>
-                    <div>
-                        <img src={hamsa} alt="hamsa icon" />
-                        <h4>What's up with the name?</h4>
-                        <p>There are advances being made in science and technology everyday, and a good example of this is the LCD monitor. LCD monitors have several benefits over the old chunky <strong>computer</strong> monitors that most users are familiar with. Old computer monitors, take up quite a bit of desktop space, put out a ton of heat, drain a ton of energy, and most often have low picture quality and resolution.</p>
-                    </div>
+                    <p className="subheader">Vampies The romantic Ideology Behind them</p>
+                    <div className="story-answers">
+                        <div className="story-answer">
+                            <div className="story-question">
+                                <img src={bird} alt="bird icon" />
+                                <h4>Who are we?</h4>  
+                            </div>
+                            <p>There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life.</p>
+                            <p><span>And part of that is the desire to instill</span> in our children the love of science, of learning and particularly the love of nature.</p>
+                        </div>
+                        <div className="story-answer-2">
+                            <div className="story-question">
+                                <img src={hamsa} alt="hamsa icon" />
+                                <h4>What's up with the name?</h4>     
+                            </div>
+                        
+                            <p>There are advances being made in science and technology everyday, and a good example of this is the LCD monitor. LCD monitors have several benefits over the old chunky <strong>computer</strong> monitors that most users are familiar with. Old computer monitors, take up quite a bit of desktop space, put out a ton of heat, drain a ton of energy, and most often have low picture quality and resolution.</p>
+                        </div>
+                    </div>  
                 </section>
 
-                <section>
-                    <h4>Our Recent Post</h4>
-                    <p>Vampies The Romantic Ideology Behind Them</p>
-                    <div>
-                        <img src={beachView} alt="Mid-day ocean-front view of a sparse beach" />
-                        <h5>Upgrading to Microsoft Windows Vista Tips</h5>
-                        <p>By <strong>Abdul Hasan Milon</strong> | 02 Feb 2019</p>
+                <section className="blog">
+                    <h3>Our Recent Post</h3>
+                    <p className='subheader'>Vampies The Romantic Ideology Behind Them</p>
+                    <div className='posts'>
+                        <div className='blog-post'>
+                            <img src={beachView} alt="Mid-day ocean-front view of a sparse beach" />
+                            <h5>Upgrading To Microsoft Windows Vista Tips</h5>
+                            <p className='blog-p'>By <strong>Abdul Hasan Milon</strong> | 02 Feb 2019</p>
+                        </div>
+                        <div className='blog-post'>
+                            <img src={coastalView} alt="View of beautiful, tropical beach inlet from the sky" />
+                            <h5>Finally A Top Secret Way You Can Get</h5>
+                            <p className='blog-p'>By <strong>Milon Mahamud</strong> | 06 Feb 2019</p>
+                        </div>
+                        <div className='blog-post'>
+                            <img src={townView} alt="Bird's eye view of a small Mediterranean Beach island town" />
+                            <h5>The Universe Through A Child's Eyes</h5>
+                            <p className='blog-p'>By <strong>Speed Smith</strong> | 08 Feb 2019</p>
+                        </div>
                     </div>
-                    <div>
-                        <img src={coastalView} alt="View of beautiful, tropical beach inlet from the sky" />
-                        <h5>Finally A top Secret Way You Can Get</h5>
-                        <p>By <strong>Milon Mahamud</strong> | 06 Feb 2019</p>
-                    </div>
-                    <div>
-                        <img src={townView} alt="Bird's eye view of a small Mediterranean Beach island town" />
-                        <p>By <strong>Speed Smith</strong> | 08 Feb 2019</p>
-                    </div>
+                        <ul class="carousel-indicators">
+                            <li></li>
+                            <li className="active"></li>
+                            <li></li>
+                        </ul>
                 </section>
 
                 <section>
                     {/* Insert Subscription Component Here */}
                 </section>
 
-                <section>
-                    <div>
+                <section className='bottom-nav'>
+                    <div className='bottom-logo'>
                         <img src={logo} alt="Protips Logo" />
                         <p>Maui helicopter tours are a great way to see the island from a different perspective and have a fun adventure.</p>
                     </div>
-                    <div className="bottom-nav">
-                        <h4>Quick Links</h4>
-                        <Link to="#">About Us</Link>
-                        <Link to="#">Blog</Link>
-                        <Link to="#">Contact</Link>
-                        <Link to="#">FAQ</Link>
-                    </div>
-                    <div className="bottom-nav">
-                        <h4>Pages</h4>
-                        <Link to ="">Disclaimer</Link>
-                        <Link to ="">Financing</Link>
-                        <Link to ="">Privacy Policy</Link>
-                        <Link to ="">Terms of Service</Link>
-                    </div>
-                    <div className="bottom-nav">
-                        <h4>Legal Stuff</h4>
-                        <Link to ="">Disclaimer</Link>
-                        <Link to ="">Financing</Link>
-                        <Link to ="">Privacy Policy</Link>
-                        <Link to ="">Terms of Service</Link>
-                    </div>
+                    <div className="columns"> 
+                        <div className="bottom-nav-list">
+                            <h4>Quick Links</h4>
+                            <Link to="#">About Us</Link>
+                            <Link to="#">Blog</Link>
+                            <Link to="#">Contact</Link>
+                            <Link to="#">FAQ</Link>
+                        </div>
+                        <div className="bottom-nav-list">
+                            <h4>Pages</h4>
+                            <Link to ="">Disclaimer</Link>
+                            <Link to ="">Financing</Link>
+                            <Link to ="">Privacy Policy</Link>
+                            <Link to ="">Terms of Service</Link>
+                        </div>
+                        <div className="bottom-nav-list">
+                            <h4>Legal Stuff</h4>
+                            <Link to ="">Disclaimer</Link>
+                            <Link to ="">Financing</Link>
+                            <Link to ="">Privacy Policy</Link>
+                            <Link to ="">Terms of Service</Link>
+                        </div> 
+                    </div>        
                 </section>
             </main>
 
             <footer>
-                <p>Design by @ehsan</p>
-                <p>Created by Zachary Crooks©</p>
+                <p>Design by <span className="designer">@ehsan</span></p>
+                <p>Developed by Zachary Crooks©</p>
             </footer>
         </div>
 
