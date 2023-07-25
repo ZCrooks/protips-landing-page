@@ -109,7 +109,7 @@ const LandingPage = () => {
                         <p className='ceo'>John Doe</p>
                         <p className='title'>CEO, PrettyDopeDesigns</p>
                         <p className="quote">"When To Use High Heat On Your Barbeque, What's Under Your Grill"</p>
-                        <ul class="carousel-indicators">
+                        <ul className="carousel-indicators">
                             <li></li>
                             <li className="active"></li>
                             <li></li>
@@ -161,7 +161,7 @@ const LandingPage = () => {
                             <p className='blog-p'>By <strong>Speed Smith</strong> | 08 Feb 2019</p>
                         </div>
                     </div>
-                        <ul class="carousel-indicators">
+                        <ul className="carousel-indicators">
                             <li></li>
                             <li className="active"></li>
                             <li></li>
