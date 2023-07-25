@@ -16,26 +16,17 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import Header from './Header';
 import Newsletter from '../components/Newsletter';
+import Signup from "../components/SignUp";
 
 const LandingPage = () => {
 
 
+
     return (
         <div className="wrapper">
-            <header>
-                <img src={logo} alt="Protips Logo" />
-                <nav>
-                    <ul className='nav-bar'>
-                        <Link to="#">Home</Link>
-                        <Link to="#">About</Link>
-                        <Link to="#">Pricing</Link>
-                        <Link to="#">Contact</Link>
-                    </ul>
-                    <button className='sign-in'>Sign In</button>
-                    <button className='sign-up'>Sign Up</button>
-                </nav>
-            </header>
+            <Header />
             <main>
                 <section className='intro'>
                     <div>
@@ -209,7 +200,6 @@ const LandingPage = () => {
                 <p>Developed by Zachary Crooks©</p>
             </footer>
         </div>
-
     )
 }
 

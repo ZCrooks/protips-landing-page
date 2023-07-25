@@ -7,8 +7,8 @@ import { addDoc, collection, serverTimestamp} from 'firebase/firestore';
 
 const Newsletter = () => {
 
-// Store User Input (email) in State
- const [input, setInput] = useState("")
+    // Store User Input (email) in State
+    const [input, setInput] = useState("")
 
     // Set User Input in State
     const inputHandler = (e) => {
@@ -32,7 +32,7 @@ const Newsletter = () => {
     }
 
     return (
-       <form action="" method="POST" name="subscriptionForm" onSubmit={handleSubmit} >
+       <form method="POST" name="subscriptionForm" className='subscriptionForm' onSubmit={handleSubmit} >
         <label htmlFor="email">Get Update Protips every newsletter</label>
         <div className="field">
             <input 

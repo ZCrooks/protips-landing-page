@@ -72,6 +72,10 @@ p {
     font-size: 0.9rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Colors and Buttons*/
 label, input {
     color: #FFFFFF;
@@ -105,12 +109,11 @@ label, input {
 .btn {
     background-color: #FF4F4F;
     color: #FFFFFF;
-    text-decoration: none;
     padding: 20px;
     border-radius: 5px;
 }
 
-nav button:not(:last-child) { 
+.sign-in:not(:last-child) { 
     background-color: #FF4F4F;
     margin-left: 20px;
     padding: 15px;
@@ -118,16 +121,18 @@ nav button:not(:last-child) {
     border-radius: 5px;
     border: 2px solid #FFFFFF;
 }
-nav button:not(:last-child):hover,
-nav button:not(:first-of-type):hover {
-    cursor: pointer;
-}
-nav button:not(:last-child):focus,
-nav button:not(:first-of-type):focus {
+
+.sign-in:not(:last-child):hover,
+.sign-up:not(:first-of-type):hover {
     cursor: pointer;
 }
 
-nav button:not(:first-of-type) { 
+.sign-in:not(:last-child):focus,
+.sign-up:not(:first-of-type):focus {
+    cursor: pointer;
+}
+
+.sign-up:not(:first-of-type) { 
     background-color: #262626;
     margin-left: 20px;
     padding: 15px;
@@ -175,6 +180,21 @@ nav {
 
 .intro-p {
     margin-bottom: 50px;
+}
+
+/* SIGNUP FORMS */
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 75vh;
+    width: 75%;
+    border-radius: 8px;
+    padding: 20px;
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+    border: 5px solid #262626;
+    margin: 5% auto;
 }
 
 /* FEATURES SECTION */
@@ -323,11 +343,11 @@ h3, .subheader {
 }
 
 /* NEWSLETTER SUBSCRIPTION */
-form, input {
+.subscriptionForm, input {
     background-color: #FF4F4F;
 }
 
-form {
+.subscriptionForm {
     display: flex;
     align-items: center;
     height: 25vh;
@@ -363,7 +383,6 @@ input {
 
 /* BOTTOM NAV SECTION */
 
-
 .bottom-nav {
     display: flex;
     align-items: center;
@@ -397,6 +416,7 @@ input {
 h5 {
     margin-bottom: 1px;
 }
+
 /* FOOTER */
 
 footer {
