@@ -264,14 +264,17 @@ nav {
     width: 50%;
 }
 
+.sub-header {
+    display: flex;
+    align-items: center;
+}
 
 .sub-header img {
     width: 35%;
-    margin-right: 30px;
 }
 
-.sub-header {
-    display: flex;
+.sub-header p {
+    margin-right: 5px;
 }
 
 .protips {
@@ -363,6 +366,7 @@ h3, .subheader {
 
 .posts {
     display: flex;
+    align-items: first baseline;
 }
 
 .blog-p {
