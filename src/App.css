@@ -125,11 +125,13 @@ label, input {
 .sign-in:not(:last-child):hover,
 .sign-up:not(:first-of-type):hover {
     cursor: pointer;
+    background-color: #474BFF;
 }
 
 .sign-in:not(:last-child):focus,
 .sign-up:not(:first-of-type):focus {
     cursor: pointer;
+    background-color: #474BFF;
 }
 
 .sign-up:not(:first-of-type) { 
@@ -182,12 +184,12 @@ nav {
     margin-bottom: 50px;
 }
 
-/* SIGNUP FORMS */
+/* SIGNUP FORM */
 .sign-up-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 75vh;
+    height: 90vh;
     width: 75%;
     border-radius: 8px;
     padding: 20px;
@@ -195,6 +197,32 @@ nav {
     background-color: #FFFFFF;
     border: 5px solid #262626;
     margin: 5% auto;
+}
+
+.sign-form-input {
+    width: 75%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.sign-form-btn {
+    background-color: #262626;
+    color: #FFFFFF;
+    border: 2px solid #262626;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+}
+
+.sign-form-btn:hover{
+    cursor: pointer;
+    background-color: #474BFF;
+}
+
+.sign-form-btn:focus {
+    cursor: pointer;
+    background-color: #474BFF;
 }
 
 /* FEATURES SECTION */
