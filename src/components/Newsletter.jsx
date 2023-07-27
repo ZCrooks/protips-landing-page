@@ -40,7 +40,8 @@ const Newsletter = () => {
                 placeholder="Enter your email" 
                 required={true} 
                 onChange={inputHandler} 
-                value = {input} />
+                value = {input} 
+                aria-label="Email" />
             <button 
                 type="submit" 
                 className="submit">
