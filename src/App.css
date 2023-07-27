@@ -1,4 +1,4 @@
-/* SETUP */
+/* SETUP SNIPPET */
 html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -18,7 +18,7 @@ img {max-width: 100%; display: block;}
 }
 
 body {
-    background-image: radial-gradient(at top right, transparent 50%, #fff 50%), linear-gradient(#FF4F4F 100%, #FF4F4F 100%);
+    background-image: radial-gradient(at top right, transparent 50%, #fff 75%), linear-gradient(#FF4F4F 100%, #FF4F4F 100%);
     background-size: 120% 100%, cover;
     background-repeat: no-repeat;
     margin: 0;
@@ -47,7 +47,6 @@ h1, label {
     font-weight: 500;
 }
 
-
 h2, h3, h4, h5, p, li, a, input, .btn, .bottom-nav, .sign-in, .sign-up, .video-play {
     font-family: 'Poppins', sans-serif;
     color: #262626;
@@ -70,6 +69,18 @@ h4 {
 
 p { 
     font-size: 0.9rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #474BFF;
+}
+
+a:focus {
+    color: #474BFF;
 }
 
 /* Colors and Buttons*/
@@ -105,12 +116,11 @@ label, input {
 .btn {
     background-color: #FF4F4F;
     color: #FFFFFF;
-    text-decoration: none;
     padding: 20px;
     border-radius: 5px;
 }
 
-nav button:not(:last-child) { 
+.sign-in:not(:last-child) { 
     background-color: #FF4F4F;
     margin-left: 20px;
     padding: 15px;
@@ -118,16 +128,20 @@ nav button:not(:last-child) {
     border-radius: 5px;
     border: 2px solid #FFFFFF;
 }
-nav button:not(:last-child):hover,
-nav button:not(:first-of-type):hover {
+
+.sign-in:not(:last-child):hover,
+.sign-up:not(:first-of-type):hover {
     cursor: pointer;
-}
-nav button:not(:last-child):focus,
-nav button:not(:first-of-type):focus {
-    cursor: pointer;
+    background-color: #474BFF;
 }
 
-nav button:not(:first-of-type) { 
+.sign-in:not(:last-child):focus,
+.sign-up:not(:first-of-type):focus {
+    cursor: pointer;
+    background-color: #474BFF;
+}
+
+.sign-up:not(:first-of-type) { 
     background-color: #262626;
     margin-left: 20px;
     padding: 15px;
@@ -145,6 +159,9 @@ header {
     align-items: center;
 }
 
+header img {
+    min-width: 100px;
+}
 
 nav {
     display: flex;
@@ -177,21 +194,63 @@ nav {
     margin-bottom: 50px;
 }
 
+/* SIGNUP/SIGN IN FORM */
+.form  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    border-radius: 8px;
+    padding: 20px;
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+    border: 5px solid #262626;
+    margin: 5% auto;
+}
+
+.form-input {
+    width: 75%;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.form-btn {
+    background-color: #262626;
+    color: #FFFFFF;
+    border: 2px solid #262626;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+}
+
+.form-btn:hover{
+    cursor: pointer;
+    background-color: #474BFF;
+}
+
+.form-btn:focus {
+    cursor: pointer;
+    background-color: #474BFF;
+}
+
 /* FEATURES SECTION */
 .features {
    margin-top: 15%;
 }
 
 .features ul {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 20px;
 }
 
 .features li {
     display: flex;
-    align-items: start;
-    flex-direction: column;
-    margin-right: 80px;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: flex-end;
 }
 
 .icon-box {
@@ -215,14 +274,17 @@ nav {
     width: 50%;
 }
 
+.sub-header {
+    display: flex;
+    align-items: center;
+}
 
 .sub-header img {
     width: 35%;
-    margin-right: 30px;
 }
 
-.sub-header {
-    display: flex;
+.sub-header p {
+    margin-right: 5px;
 }
 
 .protips {
@@ -279,7 +341,6 @@ h3, .subheader {
 
 .story-answers { 
     display: flex;
-    align-items: center;
 }
 
 .story-answer {
@@ -315,6 +376,7 @@ h3, .subheader {
 
 .posts {
     display: flex;
+    align-items: first baseline;
 }
 
 .blog-p {
@@ -323,12 +385,13 @@ h3, .subheader {
 }
 
 /* NEWSLETTER SUBSCRIPTION */
-form, input {
+.subscriptionForm, input {
     background-color: #FF4F4F;
 }
 
-form {
-    display: flex;
+.subscriptionForm {
+    display: grid;
+    grid-template-rows: 60% 25%;
     align-items: center;
     height: 25vh;
     width: 100%;
@@ -340,6 +403,7 @@ form {
 
 input {
     border: 1px solid #FFFFFF;
+    text-indent: 5px;
 }
 
 .submit {
@@ -364,7 +428,7 @@ input {
 
 .bottom-nav {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     padding: 30px 0 50px 0;
     border-top: 1px solid #BCD0E5;
     border-bottom: 1px solid #BCD0E5;
@@ -389,13 +453,17 @@ input {
 .columns {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+h5 {
+    margin-bottom: 1px;
 }
 
 /* FOOTER */
 
 footer {
-    margin-top: 10%;
+    margin-top: 5%;
     text-align: center;
 }
 
