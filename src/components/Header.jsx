@@ -8,7 +8,6 @@ const Header = () => {
         <Link to="/">
             <img src={logo} alt="Protips Logo" />
         </Link>
-        
         <nav>
             <ul className='nav-bar'>
                 <Link to="/">Home</Link>
@@ -16,8 +15,8 @@ const Header = () => {
                 <Link to="#">Pricing</Link>
                 <Link to="#">Contact</Link>
             </ul>
-            <Link className="sign-in">Sign In</Link>
-            <Link to="signup" className="sign-up">Sign Up</Link>
+            <Link to="/signin" className="sign-in">Sign In</Link>
+            <Link to="/signup" className="sign-up">Sign Up</Link>
         </nav>
     </header>
     )
