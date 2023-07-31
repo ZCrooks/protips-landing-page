@@ -83,6 +83,9 @@ a:focus {
     color: #474BFF;
 }
 
+.welcome-message {
+    text-align: left;
+}
 /* Colors and Buttons*/
 label, input {
     color: #FFFFFF;
@@ -120,7 +123,7 @@ label, input {
     border-radius: 5px;
 }
 
-.sign-in:not(:last-child) { 
+.sign-in:not(:last-child), button { 
     background-color: #FF4F4F;
     margin-left: 20px;
     padding: 15px;
@@ -130,7 +133,8 @@ label, input {
 }
 
 .sign-in:not(:last-child):hover,
-.sign-up:not(:first-of-type):hover {
+.sign-up:not(:first-of-type):hover,
+button:hover {
     cursor: pointer;
     background-color: #474BFF;
 }
@@ -486,3 +490,6 @@ footer {
 .carousel-indicators .active  {
     background-color: #FF4F4F;
 }
+
+/* MEDIA QUERIES */
+

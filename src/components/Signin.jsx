@@ -5,6 +5,7 @@ import { useState } from "react";
 import { signInWithEmailAndPassword} from "firebase/auth";
 import { auth } from "../firebase";
 
+
 const Signin = () => {
 
     const [email, setEmail] = useState("");
@@ -16,8 +17,8 @@ const Signin = () => {
             .then((userCredential) => {
                 console.log(userCredential)
             })
-            .catch((error) => {
-                console.log(error)
+            .catch((error) => { 
+                alert("User not found. Try Again!")
             })
     }
 
@@ -32,7 +33,7 @@ const Signin = () => {
                 onSubmit={handleSignIn} >
                 
                 <h2>LOGIN</h2>
-                <p>Please use this form to Sign In as an existing user!</p>
+                <p>Please use this form to Sign in you already have an account!</p>
                 <Link to="/signup">Don't have an account yet? Click to create.</Link>
 
                 <input 

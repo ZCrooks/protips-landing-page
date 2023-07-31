@@ -1,25 +1,41 @@
 // SIGNUP FORM 
 import Header from "./Header";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useState } from "react";
 import { auth } from "../firebase";
+
 
 const Signup = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [name, setName] = useState("");
 
     const handleSignUp = (e) =>{
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                console.log(userCredential)
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-    }
+                const user = userCredential.user;
 
-   
+                // Set display name for the user
+                updateProfile(user, {
+                    displayName: name,
+                }) 
+                    .then(() => {
+                    console.log("Updated successfuly", name)
+                    }) .catch((error) => {
+                    console.log("Error updating user profile:", error);
+                    });
+                    console.log("User object with updated display name:", user);
+                })
+                
+            .catch((error) => {
+                const errorMessage = error.message;
+                alert(errorMessage)
+            })
+        setEmail("");
+        setPassword("");
+    };
+
     return (
     <div className="wrapper">
         <Header />
@@ -36,7 +52,8 @@ const Signup = () => {
                 className="form-input" 
                 type="text" id="firstName" 
                 name="firstName" 
-                placeholder="First name" 
+                placeholder="First name"
+                onChange={(e) => setName(e.target.value)}
                 aria-label="First name" />
 
             <input 
