@@ -11,14 +11,26 @@ const Header = () => {
                 <img src={logo} alt="Protips Logo" />
             </Link>
             <nav>
-                <ul className="nav-bar">
-                    <Link to="/">Home</Link>
-                    <Link to="#">About</Link>
-                    <Link to="#">Pricing</Link>
-                    <Link to="#">Contact</Link>
-                </ul>
-                <Link to="/signin" className="sign-in">Sign In</Link>
-                <Link to="/signup" className="sign-up">Sign Up</Link> 
+                <div className="menu">
+                    <div className="container nav-container">
+                        <input className="checkbox" type="checkbox" />
+                        <div className="hamburger-lines">
+                            <span className="line line1"></span>
+                            <span className="line line2"></span>
+                            <span className="line line3"></span>
+                        </div>
+                        <div className="menu-items">
+                            <ul className="nav-bar">
+                                <Link to="/">Home</Link>
+                                <Link to="#">About</Link>
+                                <Link to="#">Pricing</Link>
+                                <Link to="#">Contact</Link>
+                            </ul>
+                            <Link to="/signin" className="sign-in">Sign In</Link>
+                            <Link to="/signup" className="sign-up">Sign Up</Link> 
+                        </div>
+                    </div>
+                </div>
             </nav>
         </header>
         <AuthDetails />    
