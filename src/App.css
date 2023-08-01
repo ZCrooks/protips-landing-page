@@ -126,7 +126,7 @@ label, input {
 .sign-in:not(:last-child), button { 
     background-color: #FF4F4F;
     margin-left: 20px;
-    padding: 15px;
+    padding: 10px;
     color: #FFFFFF;
     border-radius: 5px;
     border: 2px solid #FFFFFF;
@@ -148,7 +148,7 @@ button:hover {
 .sign-up:not(:first-of-type) { 
     background-color: #262626;
     margin-left: 20px;
-    padding: 15px;
+    padding: 10px;
     color: #FFFFFF;
     border-radius: 5px;
     border: 2px solid #262626;
@@ -248,6 +248,7 @@ nav {
     display: grid;
     grid-template-columns: 50% 50%;
     row-gap: 20px;
+    justify-items: center;
 }
 
 .features li {
@@ -293,6 +294,7 @@ nav {
 
 .protips {
     margin-left: 50px;
+    width: 60%;
 }
 
 .protips-list {
@@ -302,6 +304,11 @@ nav {
 
 .protips-list li {
     margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
 }
 
 /* TESTIMONIAL SECTION */
@@ -493,3 +500,100 @@ footer {
 
 /* MEDIA QUERIES */
 
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+    .intro {
+        flex-direction: column;
+        justify-content: center;
+        margin: o auto;
+    }
+    .intro img {
+        margin-top: 30px;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    .learn  {
+       flex-direction: column-reverse;
+       align-items: center;
+    }
+    .learn img {
+        margin-top: 20px;
+    }
+    .features ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .story-answers {
+        flex-direction: column;
+    }
+    .story-answer, .story-answer-2 {
+        width: 100%;
+    }
+    .story-question {
+        align-items: flex-end;
+    }
+    h4 {
+        margin-bottom: 0;
+    }
+    .posts {
+        flex-direction: column;
+    }
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .video-play {
+        margin: 0;
+    }
+}
+
+/* Newsletter Subscription Media Query */
+@media (max-width: 510px) {
+    .subscriptionForm {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        padding: 10px;
+    }
+    .subscriptionForm label {
+        margin-top: 30px;
+    }
+    .subscriptionForm input {
+        font-size: 1rem;
+    }
+    .subscriptionForm .field {
+        flex-direction: column;
+        align-items: center;
+    }
+    .submit {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    .bottom-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottom-logo {
+        width: 100%;
+        margin: 0;
+    }
+    .columns {
+        flex-direction: column;
+    }
+}
+
+/* Secondary Newsletter Subscription Media Query */
+@media (max-width: 440px) {
+    .subscriptionForm input {
+        font-size: 0.7rem;
+    }
+}

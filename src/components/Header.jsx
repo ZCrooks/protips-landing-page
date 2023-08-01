@@ -11,7 +11,7 @@ const Header = () => {
                 <img src={logo} alt="Protips Logo" />
             </Link>
             <nav>
-                <ul className='nav-bar'>
+                <ul className="nav-bar">
                     <Link to="/">Home</Link>
                     <Link to="#">About</Link>
                     <Link to="#">Pricing</Link>
