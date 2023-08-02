@@ -1,7 +1,6 @@
 // HEADER COMPONENT
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
-import AuthDetails from './AuthDetails';
 
 const Header = () => {
     return (
@@ -21,10 +20,10 @@ const Header = () => {
                         </div>
                         <div className="menu-items">
                             <ul className="nav-bar">
-                                <Link to="/">Home</Link>
-                                <Link to="#">About</Link>
-                                <Link to="#">Pricing</Link>
-                                <Link to="#">Contact</Link>
+                                <li><Link to="/">Home</Link></li>
+                                <li><Link to="#">About</Link></li>
+                                <li><Link to="#">Pricing</Link></li>
+                                <li><Link to="#">Contact</Link></li>     
                             </ul>
                             <Link to="/signin" className="sign-in">Sign In</Link>
                             <Link to="/signup" className="sign-up">Sign Up</Link> 
@@ -32,8 +31,7 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-        </header>
-        <AuthDetails />    
+        </header> 
     </>
     )
 }

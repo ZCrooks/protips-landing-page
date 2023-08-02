@@ -18,7 +18,7 @@ import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import Header from './Header';
 import Newsletter from '../components/Newsletter';
-import Signup from "../components/SignUp";
+import AuthDetails from "./AuthDetails";
 
 const LandingPage = () => {
 
@@ -28,6 +28,7 @@ const LandingPage = () => {
         <div className="wrapper">
             <Header />
             <main>
+                <AuthDetails />
                 <section className='intro'>
                     <div>
                         <h1>A Guide To <strong>Rocky</strong> Mountain Vacations</h1>
@@ -165,7 +166,7 @@ const LandingPage = () => {
                 </section>
 
                 <section>
-                    {/* Insert Subscription Component Here */}
+                    {/* Newsletter Subscription Component */}
                     <Newsletter />
                 </section>
 

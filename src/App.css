@@ -74,6 +74,10 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style: none;
+}
+
 a:hover {
     color: #474BFF;
 }
@@ -484,6 +488,26 @@ h5 {
     margin-bottom: 1px;
 }
 
+/* USER SIGNED IN LINKS */
+.signedIn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.user-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.user-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
 /* FOOTER */
 
 footer {
@@ -565,7 +589,7 @@ footer {
     }
 
     /* HAMBURGER MENU - Credit to Alvaro of CodePen*/
-    .menu .nav-container a {
+    .menu .nav-container li, .menu .nav-container a{
         font-weight: 500;
         font-size: 1.2rem;
         padding: 0.7rem;

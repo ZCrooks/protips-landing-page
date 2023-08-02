@@ -3,6 +3,7 @@ import Header from "./Header";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useState } from "react";
 import { auth } from "../firebase";
+import AuthDetails from "./AuthDetails";
 
 
 const Signup = () => {
@@ -39,6 +40,7 @@ const Signup = () => {
     return (
     <div className="wrapper">
         <Header />
+        <AuthDetails />
         <form 
             method="POST" 
             name="signUpForm" 

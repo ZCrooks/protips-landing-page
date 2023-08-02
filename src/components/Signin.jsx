@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { signInWithEmailAndPassword} from "firebase/auth";
 import { auth } from "../firebase";
-
+import AuthDetails from "./AuthDetails";
 
 const Signin = () => {
 
@@ -22,10 +22,10 @@ const Signin = () => {
             })
     }
 
-    
     return (
         <div className="wrapper">
             <Header/>
+            <AuthDetails />
             <form 
                 method="POST" 
                 name="signInForm" 
