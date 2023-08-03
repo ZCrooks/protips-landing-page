@@ -1,15 +1,16 @@
 // SIGNIN FORM
 import Header from "./Header";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom"; 
+import { useState } from "react"; 
 import { signInWithEmailAndPassword} from "firebase/auth";
 import { auth } from "../firebase";
 import AuthDetails from "./AuthDetails";
-
-const Signin = () => {
+    
+const Signin = () => { 
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     const handleSignIn = (e) =>{
         e.preventDefault();
@@ -20,7 +21,8 @@ const Signin = () => {
             .catch((error) => { 
                 alert("User not found. Try Again!")
             })
-    }
+            navigate('/')
+        }
 
     return (
         <div className="wrapper">

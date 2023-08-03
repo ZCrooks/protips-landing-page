@@ -45,10 +45,9 @@ const Newsletter = () => {
             <button 
                 type="submit" 
                 className="submit">
-                    <FontAwesomeIcon icon={faPaperPlane} style={{color: "#ffffff",}}/>
+                <FontAwesomeIcon icon={faPaperPlane} style={{color: "#ffffff",}}/>
             </button>       
         </div>
-
        </form>
     )
 }
