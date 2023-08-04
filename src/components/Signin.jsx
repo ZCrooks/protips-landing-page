@@ -16,12 +16,11 @@ const Signin = () => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                console.log(userCredential)
+                navigate("/")
             })
             .catch((error) => { 
                 alert("User not found. Try Again!")
             })
-            navigate('/')
         }
 
     return (
