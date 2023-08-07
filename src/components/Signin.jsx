@@ -6,14 +6,16 @@ import { signInWithEmailAndPassword} from "firebase/auth";
 import { auth } from "../firebase";
 import AuthDetails from "./AuthDetails";
     
-const Signin = () => { 
+const Signin = ({ setSignedIn }) => { 
 
     const [email, setEmail] = useState("");
+    // const [signedIn, setSignedIn] = useState(false);
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
     const handleSignIn = (e) =>{
         e.preventDefault();
+        setSignedIn(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 navigate("/")
@@ -25,7 +27,6 @@ const Signin = () => {
 
     return (
         <div className="wrapper">
-            <Header/>
             <AuthDetails />
             <form 
                 method="POST" 

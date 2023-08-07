@@ -1,8 +1,20 @@
 // HEADER COMPONENT
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
+import { auth } from "../firebase"
+import { signOut } from "firebase/auth";
+import { useState } from "react";
 
-const Header = () => {
+const Header = ({ signedIn, setSignedIn }) => {
+
+    // User SignOut Function 
+    const userSignOut = () => {
+        setSignedIn(false);
+        signOut(auth).then(() => {
+            alert("Sign Out Successful");
+        }).catch (error => alert(error))
+    }
+    
     return (
     <>
         <header>
@@ -25,7 +37,11 @@ const Header = () => {
                                 <li><Link to="#">Pricing</Link></li>
                                 <li><Link to="#">Contact</Link></li>     
                             </ul>
-                            <Link to="/signin" className="sign-in">Sign In</Link>
+                            {signedIn ? (
+                            <button onClick={userSignOut}>Sign Out</button>   
+                            ) : (
+                            <Link to="/signin" className="sign-in">Sign In</Link> 
+                            )}  
                             <Link to="/signup" className="sign-up">Sign Up</Link> 
                         </div>
                     </div>

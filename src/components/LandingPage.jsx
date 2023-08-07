@@ -26,7 +26,6 @@ const LandingPage = () => {
 
     return (
         <div className="wrapper">
-            <Header />
             <main>
                 <AuthDetails />
                 <section className='intro'>

@@ -1,7 +1,7 @@
 // USER AUTHENTICATION 
 import { useEffect, useState } from "react";
 import { auth } from "../firebase";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,7 +16,7 @@ const AuthDetails = () => {
     useEffect(() => {
         const listen = onAuthStateChanged(auth, (user) => {
             if (user) {
-                setAuthUser(user)
+                setAuthUser(user);
             }   else {
                 setAuthUser(null);
             }
@@ -25,12 +25,6 @@ const AuthDetails = () => {
             listen();
         }
     }, []);
-
-    const userSignOut = () => {
-        signOut(auth).then(() => {
-            alert("Signed Out")
-        }).catch (error => alert(error))
-    }
 
     return (
         <div className="wrapper signedIn">
@@ -55,7 +49,6 @@ const AuthDetails = () => {
                         <FontAwesomeIcon icon={faGear} style={{color: "#FF4F4F",}}/>         
                     </li>
                 </ul>
-                <button onClick={userSignOut}>Sign Out</button>
             </>  
                 : null }
         </div>
