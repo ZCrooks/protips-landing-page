@@ -16,9 +16,8 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
-import Header from './Header';
 import Newsletter from '../components/Newsletter';
-import Signup from "../components/SignUp";
+import AuthDetails from "./AuthDetails";
 
 const LandingPage = () => {
 
@@ -26,8 +25,8 @@ const LandingPage = () => {
 
     return (
         <div className="wrapper">
-            <Header />
             <main>
+                <AuthDetails />
                 <section className='intro'>
                     <div>
                         <h1>A Guide To <strong>Rocky</strong> Mountain Vacations</h1>
@@ -86,9 +85,14 @@ const LandingPage = () => {
                             <li><FontAwesomeIcon icon={faCircleCheck} style={{color: "#ee5f5b",}} />  Get Best Advertiser In Your Side Pocket</li>
                             <li><FontAwesomeIcon icon={faCircleCheck} style={{color: "#ee5f5b",}} />  What's Under Your Grill</li>
                         </ul>
-                        <Link to="#" className='btn'>Know More</Link>
-                        <Link className='video-play' to="#">Watch Video </Link> 
-                        <FontAwesomeIcon icon={faPlay} style={{color: "#ee5f5b",}} />
+                        <div className="button-container">
+                            <Link to="#" className='btn'>Know More</Link>
+                            <div>
+                                <Link className='video-play' to="#">Watch Video </Link> 
+                                <FontAwesomeIcon icon={faPlay} style={{color: "#ee5f5b",}} />        
+                            </div>
+                        
+                        </div>
                     </div>
                 </section>
 
@@ -160,7 +164,7 @@ const LandingPage = () => {
                 </section>
 
                 <section>
-                    {/* Insert Subscription Component Here */}
+                    {/* Newsletter Subscription Component */}
                     <Newsletter />
                 </section>
 
