@@ -16,7 +16,6 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
-import Header from './Header';
 import Newsletter from '../components/Newsletter';
 import AuthDetails from "./AuthDetails";
 

@@ -7,9 +7,9 @@ import { useState } from "react";
 
 const Header = ({ signedIn, setSignedIn }) => {
 
-    // User SignOut Function 
-    const userSignOut = () => {
-        setSignedIn(false);
+    // Handle User SignOut  
+    const handleSignOut = () => {
+        setSignedIn(false)
         signOut(auth).then(() => {
             alert("Sign Out Successful");
         }).catch (error => alert(error))
@@ -37,8 +37,9 @@ const Header = ({ signedIn, setSignedIn }) => {
                                 <li><Link to="#">Pricing</Link></li>
                                 <li><Link to="#">Contact</Link></li>     
                             </ul>
+                            {/* Ternary operator for displaying either Signed Out or Signed In button depending on state  */}
                             {signedIn ? (
-                            <button onClick={userSignOut}>Sign Out</button>   
+                            <button onClick={handleSignOut} className="sign-out">Sign Out</button>   
                             ) : (
                             <Link to="/signin" className="sign-in">Sign In</Link> 
                             )}  

@@ -1,14 +1,13 @@
 import LandingPage from "./components/LandingPage";
-import Signup from "./components/SignUp";
-import Signin from "./components/Signin";
+import SignUp from "./components/Signup";
+import SignIn from "./components/Signin";
 import {Routes, Route} from "react-router-dom";
-import AuthDetails from "./components/AuthDetails";
 import Header from "./components/Header";
 import { useState } from "react";
 
 
 function App() {
-  
+  // State for handling User Signedin Status
   const [signedIn, setSignedIn] = useState(false);
 
   return (
@@ -16,8 +15,8 @@ function App() {
     <Header signedIn={signedIn} setSignedIn={setSignedIn} />
       <Routes>
         <Route path ="/" element={<LandingPage/>}/>
-        <Route path ="signup" element={<Signup/>}/>
-        <Route path ="signin" element={<Signin setSignedIn={setSignedIn}/>}/>
+        <Route path ="signup" element={<SignUp setSignedIn={setSignedIn}/>}/>
+        <Route path ="signin" element={<SignIn setSignedIn={setSignedIn}/>}/>
       </Routes>
     </>
   )

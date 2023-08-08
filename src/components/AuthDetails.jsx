@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { auth } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { Link } from "react-router-dom";
-import Header from "./Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faUmbrellaBeach } from "@fortawesome/free-solid-svg-icons";
@@ -11,8 +10,10 @@ import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
 
 const AuthDetails = () => {
+    // Declare state vairable to hold authenticated user data
     const [authUser, setAuthUser] = useState(null);
 
+    // Listen for changes in authentication state with UseEffect
     useEffect(() => {
         const listen = onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -28,6 +29,7 @@ const AuthDetails = () => {
 
     return (
         <div className="wrapper signedIn">
+            {/* Ternary operator for displaying if user is authenticated and logged in */}
             {authUser ? 
             <>
                 <h3 className="welcome-message">{`Welcome to Protips, ${authUser.displayName}!`}</h3> 
@@ -37,11 +39,11 @@ const AuthDetails = () => {
                          <FontAwesomeIcon icon={faUser} style={{color: "#FF4F4F",}}/>
                     </li>
                     <li className="user-link">
-                        <Link to="#">Your Bookings</Link>
+                        <Link to="#">Bookings</Link>
                         <FontAwesomeIcon icon={faUmbrellaBeach} style={{color: "#FF4F4F",}}/>
                     </li>
                     <li className="user-link">
-                        <Link to="#">Affiliate Program</Link>
+                        <Link to="#">Affiliates</Link>
                         <FontAwesomeIcon icon={faDollarSign} style={{color: "#FF4F4F",}} />
                     </li>
                     <li className="user-link">

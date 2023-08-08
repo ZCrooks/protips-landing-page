@@ -86,9 +86,6 @@ a:focus {
     color: #474BFF;
 }
 
-.welcome-message {
-    text-align: left;
-}
 /* Colors and Buttons*/
 label, input {
     color: #FFFFFF;
@@ -126,7 +123,7 @@ label, input {
     border-radius: 5px;
 }
 
-.sign-in:not(:last-child), button { 
+.sign-in, .sign-out { 
     background-color: #FF4F4F;
     margin-left: 20px;
     padding: 10px;
@@ -135,20 +132,22 @@ label, input {
     border: 2px solid #FFFFFF;
 }
 
-.sign-in:not(:last-child):hover,
-.sign-up:not(:first-of-type):hover,
-button:hover {
+.sign-in:hover, .sign-in:focus,
+.sign-up:hover, .sign-up:focus, 
+.sign-out:hover, .sign-out:focus {
     cursor: pointer;
     background-color: #474BFF;
 }
 
-.sign-in:not(:last-child):focus,
-.sign-up:not(:first-of-type):focus {
-    cursor: pointer;
-    background-color: #474BFF;
+.sign-in:hover, .sign-in:focus {
+    color: #FFFFFF;
 }
 
-.sign-up:not(:first-of-type) { 
+.sign-up:hover, .sign-up:focus {
+    color: #000;
+}
+
+.sign-up { 
     background-color: #262626;
     margin-left: 20px;
     padding: 10px;
@@ -162,7 +161,7 @@ button:hover {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -227,6 +226,7 @@ nav {
     background-color: #FFFFFF;
     border: 5px solid #262626;
     margin: 5% auto;
+    margin-top: 50px;
 }
 
 .form-input {
@@ -493,11 +493,13 @@ h5 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: yellow;
+    margin-top: 50px;
+    border-radius: 15px;
 }
 .user-links {
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
 }
 
 .user-link {
@@ -551,12 +553,21 @@ footer {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+    header {
+        justify-content: start;
+    }
+    header img {
+        margin-left: 20px;
+    }
     .learn  {
        flex-direction: column-reverse;
        align-items: center;
     }
     .learn img {
         margin-top: 20px;
+    }
+    .sub-header {
+        align-items: flex-start;
     }
     .features ul {
         display: flex;
@@ -587,9 +598,12 @@ footer {
     .video-play {
         margin: 0;
     }
+    .user-links{
+        flex-direction: column;
+    }
 
     /* HAMBURGER MENU - Credit to Alvaro of CodePen*/
-    .menu .nav-container li, .menu .nav-container a{
+    .menu .nav-container li, .menu .nav-container a, .menu .nav-container button {
         font-weight: 500;
         font-size: 1.2rem;
         padding: 0.7rem;

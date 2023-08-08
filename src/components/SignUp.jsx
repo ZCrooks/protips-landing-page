@@ -1,46 +1,46 @@
 // SIGNUP FORM 
-import Header from "./Header";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile, sendEmailVerification } from "firebase/auth";
 import { useState } from "react";
 import { auth } from "../firebase";
-import AuthDetails from "./AuthDetails";
 
-
-const Signup = () => {
+const SignUp = ({ setSignedIn }) => {
+    // Set Email, Password, and Name States
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
 
+    // User SignUp Submission
     const handleSignUp = (e) =>{
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
-
                 // Set display name for the user
                 updateProfile(user, {
                     displayName: name,
                 }) 
                     .then(() => {
-                    console.log("Updated successfuly", name)
+                        // Send Email verification
+                       sendEmailVerification(user)
+                        .then(() => {
+                            setSignedIn(true);
+                        })
                     }) .catch((error) => {
-                    console.log("Error updating user profile:", error);
+                        alert(error);
                     });
-                    console.log("User object with updated display name:", user);
                 })
-                
             .catch((error) => {
                 const errorMessage = error.message;
                 alert(errorMessage)
             })
+        // Reset Fields
         setEmail("");
         setPassword("");
     };
 
     return (
     <div className="wrapper">
-        <Header />
-        <AuthDetails />
+        {}
         <form 
             method="POST" 
             name="signUpForm" 
@@ -108,4 +108,4 @@ const Signup = () => {
     )
 }
 
-export default Signup;
+export default SignUp;

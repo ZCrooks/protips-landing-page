@@ -1,15 +1,13 @@
 // SIGNIN FORM
-import Header from "./Header";
 import { Link, useNavigate } from "react-router-dom"; 
 import { useState } from "react"; 
 import { signInWithEmailAndPassword} from "firebase/auth";
 import { auth } from "../firebase";
 import AuthDetails from "./AuthDetails";
     
-const Signin = ({ setSignedIn }) => { 
+const SignIn = ({ setSignedIn }) => { 
 
     const [email, setEmail] = useState("");
-    // const [signedIn, setSignedIn] = useState(false);
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
@@ -65,4 +63,4 @@ const Signin = ({ setSignedIn }) => {
     )
 }
 
-export default Signin;
+export default SignIn;
