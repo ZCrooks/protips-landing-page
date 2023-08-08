@@ -3,7 +3,6 @@ import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 import { auth } from "../firebase"
 import { signOut } from "firebase/auth";
-import { useState } from "react";
 
 const Header = ({ signedIn, setSignedIn }) => {
 
@@ -41,9 +40,11 @@ const Header = ({ signedIn, setSignedIn }) => {
                             {signedIn ? (
                             <button onClick={handleSignOut} className="sign-out">Sign Out</button>   
                             ) : (
-                            <Link to="/signin" className="sign-in">Sign In</Link> 
+                            <>
+                                <Link to="/signin" className="sign-in">Sign In</Link> 
+                                <Link to="/signup" className="sign-up">Sign Up</Link>                             
+                            </>
                             )}  
-                            <Link to="/signup" className="sign-up">Sign Up</Link> 
                         </div>
                     </div>
                 </div>

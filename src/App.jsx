@@ -15,7 +15,7 @@ function App() {
     <Header signedIn={signedIn} setSignedIn={setSignedIn} />
       <Routes>
         <Route path ="/" element={<LandingPage/>}/>
-        <Route path ="signup" element={<SignUp setSignedIn={setSignedIn}/>}/>
+        <Route path ="signup" element={<SignUp setSignedIn={setSignedIn} signedIn={signedIn}/>}/>
         <Route path ="signin" element={<SignIn setSignedIn={setSignedIn}/>}/>
       </Routes>
     </>

@@ -7,16 +7,18 @@ import AuthDetails from "./AuthDetails";
     
 const SignIn = ({ setSignedIn }) => { 
 
+    // Initialize State variables
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
+    // User Signin Function upon form submission
     const handleSignIn = (e) =>{
         e.preventDefault();
-        setSignedIn(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 navigate("/")
+                setSignedIn(true);
             })
             .catch((error) => { 
                 alert("User not found. Try Again!")

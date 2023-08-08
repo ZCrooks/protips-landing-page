@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword, updateProfile, sendEmailVerification } 
 import { useState } from "react";
 import { auth } from "../firebase";
 
-const SignUp = ({ setSignedIn }) => {
+const SignUp = ({ setSignedIn, signedIn }) => {
     // Set Email, Password, and Name States
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -40,13 +40,13 @@ const SignUp = ({ setSignedIn }) => {
 
     return (
     <div className="wrapper">
-        {}
         <form 
             method="POST" 
             name="signUpForm" 
             className="form signUp"
             onSubmit={handleSignUp}  >
-        
+
+            {signedIn ? <h3>Welcome to Protips! Please check your inbox for a verification e-mail.</h3> : null}
             <h2>SIGN UP</h2>
             <p>Create a free account now!</p>
 
