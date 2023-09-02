@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword, updateProfile, sendEmailVerification } 
 import { useState } from "react";
 import { auth } from "../firebase";
 
-const SignUp = ({ setSignedIn, signedIn }) => {
+const SignUp = ({ setSignedIn, signedIn, handleGoogle }) => {
     // Set Email, Password, and Name States
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -101,10 +101,10 @@ const SignUp = ({ setSignedIn, signedIn }) => {
                 aria-label="Password"
                 onChange={(e) => setPassword(e.target.value)} />
 
-            <button className="form-btn" type="submit">Sign Up</button>
+            <button className="form-btn" type="submit">SIGN UP</button>
+            <button className="form-btn" onClick={handleGoogle}>SIGN UP WITH <strong>GOOGLE</strong></button>
         </form>
     </div>
-
     )
 }
 
