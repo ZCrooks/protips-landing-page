@@ -1,11 +1,11 @@
 // SIGNIN FORM
 import { Link, useNavigate } from "react-router-dom"; 
 import { useState } from "react"; 
-import { signInWithEmailAndPassword} from "firebase/auth";
+import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup} from "firebase/auth";
 import { auth } from "../firebase";
 import AuthDetails from "./AuthDetails";
     
-const SignIn = ({ setSignedIn }) => { 
+const SignIn = ({ setSignedIn, handleGoogle }) => { 
 
     // Initialize State variables
     const [email, setEmail] = useState("");
@@ -32,7 +32,8 @@ const SignIn = ({ setSignedIn }) => {
                 method="POST" 
                 name="signInForm" 
                 className="form"
-                onSubmit={handleSignIn} >
+                onSubmit={handleSignIn}
+                 >
                 
                 <h2>LOGIN</h2>
                 <p>Please use this form to Sign in you already have an account!</p>
@@ -58,7 +59,8 @@ const SignIn = ({ setSignedIn }) => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)} />
 
-                <button className="form-btn" type="submit">LOG IN</button>
+                <button className="form-btn" type="submit">LOGIN</button>
+                <button className="form-btn" onClick={handleGoogle}>SIGN IN WITH <strong>GOOGLE</strong></button>
             </form>
         </div>
         
