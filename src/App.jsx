@@ -1,6 +1,6 @@
 import LandingPage from "./components/LandingPage";
 import SignUp from "./components/Signup";
-import SignIn from "./components/SignIn";
+import SignIn from "./components/Signin";
 import {Routes, Route} from "react-router-dom";
 import { GoogleAuthProvider, signInWithPopup} from "firebase/auth";
 import { auth } from "./firebase";
